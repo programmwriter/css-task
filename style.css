@@ -1,3 +1,50 @@
-.container_task {
-  width:
+.task__container {
+  position: relative;
+  width: 800px;
+  height: 660px;
+  height: auto;
+  margin: auto;
+  background-color: #eff6ff;
+  padding: 60px 40px;
+  overflow: auto;
+}
+.task__boxImg {
+  position: relative;
+  float: left;
+  width: 420px;
+  height: 550px;
+  background-image: url("/images/bg.jpg");
+  background-size: 100%;
+  z-index: 1;
+}
+.task__boxImg::before {
+  content: "";
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  background: url("/images/logo.svg") no-repeat 100%;
+  background-size: 100%;
+  z-index: 10;
+}
+.task__boxForm {
+  float: left;
+  width: 375px;
+  height: 550px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form__container {
+  margin-left: 40px;
+  margin-top: 60px;
+  width: 290px;
+  height: 400px;
+  background-color: lightgray;
+}
+.form__titleH1 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "barlow", sans-serif;
+  color: #2a4a5c;
 }
