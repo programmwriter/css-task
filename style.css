@@ -1,3 +1,7 @@
+body {
+  font-family: "barlowregular", sans-serif;
+}
+
 .task__container {
   position: relative;
   width: 800px;
@@ -5,9 +9,10 @@
   height: auto;
   margin: auto;
   background-color: #eff6ff;
-  padding: 60px 40px;
   overflow: auto;
+  padding: 60px 40px;
 }
+
 .task__boxImg {
   position: relative;
   float: left;
@@ -17,6 +22,7 @@
   background-size: 100%;
   z-index: 1;
 }
+
 .task__boxImg::before {
   content: "";
   width: 80px;
@@ -28,23 +34,276 @@
   background-size: 100%;
   z-index: 10;
 }
+
 .task__boxForm {
   float: left;
   width: 375px;
   height: 550px;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 0;
 }
+
 .form__container {
   margin-left: 40px;
   margin-top: 60px;
   width: 290px;
   height: 400px;
-  background-color: lightgray;
 }
+
+/* title form *************************************************** */
+
 .form__titleH1 {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "barlow", sans-serif;
   color: #2a4a5c;
+}
+
+.form__titleH1 h3 {
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "barlowregular";
+}
+
+/* social *************************************************** */
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form__socialButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0;
+}
+
+.form__socialButton {
+  position: relative;
+  width: 135px;
+  height: 25px;
+  font-size: 8px;
+  color: white;
+  z-index: 10;
+}
+
+.facebook::before, .linkedin::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.facebook {
+  background: #255A9B;
+}
+
+.facebook::before {
+  background: url('/images/facebook.svg');
+}
+
+.linkedin {
+  background: #0076B6;
+}
+
+.linkedin::before {
+  background: url('/images/linkedin.svg');
+}
+
+/* delimiter *************************************************** */
+
+.form__delimiterBox {
+  width: auto;
+  z-index: 1;
+}
+
+.form__delimiter {
+  position: relative;
+  font-size: 8px;
+  width: 12px;
+  display: block;
+  margin: auto;
+  z-index: 2;
+}
+
+.form__delimiter::before, .form__delimiter::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 4px;
+  width: 60px;
+  height: 50%;
+  border-top: 1px solid #EEEEEE;
+  z-index: 10;
+}
+
+.form__delimiter::after {
+  left: 17px;
+}
+
+.form__delimiter::before {
+  left: -65px;
+}
+
+/* contacts *************************************************** */
+
+.form__contactsBox {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+}
+
+.form__contactInputBox {
+  width: 135px;
+  height: 35px;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.form__contactInputBox:hover, .form__contactInputBox:focus {
+  border-left: 1px solid #3698FB;
+}
+
+/* .form__contactInputBox:first-child {
+  border-left: 1px solid #3698FB;
+} */
+
+.form__contactInput {
+  width: 120px;
+  border: 0;
+  margin-top: 3px;
+  font-size: 10px;
+  outline: none;
+}
+
+.form__contactLabel {
+  color: #96A5B1;
+}
+
+/* title investor ********************************************* */
+
+.form__titleInvestorBox {
+  color: #2A4A5C;
+}
+
+.form__titleInvestorBox h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.form__subtitleInvestor {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* plan investments *********************************************/
+
+.form__planRadioButtonsBox {
+  margin: 20px 0;
+  font-size: 12px;
+}
+
+.form__planRadioButton {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form__planRadioButtonLabel {
+  position: relative;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.form__planRadioCheckMark {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #AFAFAF;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.form__planRadioButtonLabel .form__planRadioButton:checked~.form__planRadioCheckMark {
+  border: 2px solid #3698FB;
+}
+
+/* agreement text *********************************************/
+
+.form__agreementTextbox {
+  width: 140px;
+  height: 35px;
+  box-shadow: 0 5px 5px rgba(238, 238, 238, 0.3);
+  padding: 2px;
+}
+
+.form__agreementText {
+  font-size: 8px;
+  color: #AFAFAF;
+}
+
+/* agreement *********************************************/
+
+.form__agreementChkbox {
+  position: relative;
+  overflow: auto;
+  margin-top: 12px;
+}
+
+.form__agreementChkboxLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  margin: 0;
+  display: none;
+}
+
+.form__agreementChkboxLabel {
+  margin-left: 14px;
+  font-size: 8px;
+  color: #AFAFAF;
+}
+
+.form__agreementChkboxLabel a {
+  color: #3698FB;
+}
+
+.form__agreementCheckMark {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  /* background: #F5F5F5; */
+  border: 1px solid #AFAFAF;
+  border-radius: 10%;
+}
+
+/*create button *********************************************/
+
+.form__createButton {
+  width: 135px;
+  height: 25px;
+  font-size: 10px;
+  color: white;
+  margin-top: 30px;
+  background: #3698FB;
+  border-radius: 2px;
 }
